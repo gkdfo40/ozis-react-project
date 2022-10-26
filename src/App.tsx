@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DropDown from "./pages/DropDownPage";
+import MetaMaskWalletPage from "./pages/MetaMaskWalletPage";
 import PopupModalPage from "./pages/PopupModalPage";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <AppContainer>
       <DropDown />
       <PopupModalPage />
+      <MetaMaskWalletPage />
     </AppContainer>
   );
 };
