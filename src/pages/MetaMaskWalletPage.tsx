@@ -21,7 +21,7 @@ const MetaMaskWalletPage = () => {
   const [connectBtnFlag, setConnectBtnFlag] = useState<boolean>(false);
 
   const connectMetaMaskHandler = async () => {
-    if (window.ethereum) {
+    if (window.ethereum.isMetaMask) {
       try {
         setConnectBtnFlag(true);
         const provider = new ethers.providers.Web3Provider(window.ethereum);
