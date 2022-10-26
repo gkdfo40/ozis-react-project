@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import DropDown from "./pages/DropDownPage";
+import PopupModalPage from "./pages/PopupModalPage";
 
 const App = () => {
   return (
     <AppContainer>
       <DropDown />
+      <PopupModalPage />
     </AppContainer>
   );
 };
