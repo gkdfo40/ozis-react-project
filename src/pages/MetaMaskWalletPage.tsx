@@ -11,6 +11,9 @@ declare global {
   }
 }
 
+const agent = window.navigator.userAgent.toLocaleLowerCase();
+const browser = agent.indexOf("chrome");
+
 const MetaMaskWalletPage = () => {
   const [account, setAccount] = useState<string>();
   const [chainID, setChainID] = useState<number>();
@@ -44,6 +47,21 @@ const MetaMaskWalletPage = () => {
       alert("MetaMask 확장프로그램을 설치해주세요.");
     }
   };
+  if (browser === -1) {
+    return (
+      <CommonLayOut>
+        <div>
+          <h1>
+            This browser not serport <br />
+            metamask extension
+          </h1>
+          <a href="https://www.google.co.kr/chrome/?brand=YTUH&gclid=Cj0KCQjwkt6aBhDKARIsAAyeLJ0F_QprpGG6SdHCg70xeX1V9OXJ2swKcAmSzY-31RUlp1IVHGV_aQ8aAhU7EALw_wcB&gclsrc=aw.ds">
+            Download Chrome
+          </a>
+        </div>
+      </CommonLayOut>
+    );
+  }
 
   return (
     <CommonLayOut>
