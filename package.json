@@ -9,6 +9,7 @@
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react-modal": "^3.13.1",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
